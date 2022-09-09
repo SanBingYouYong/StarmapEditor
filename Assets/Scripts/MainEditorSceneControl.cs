@@ -8,15 +8,22 @@ public class MainEditorSceneControl : MonoBehaviour
 {
     // Cam Control
     public CinemachineVirtualCamera vcam1;
+    // maybe not needed
     public GameObject MainMenuCamMark;
     public GameObject EditorDefaultCamMark;
+    public GameObject SettingsCamMark;
 
     // Editor Panels
     public GameObject EToolsPanel;
     public GameObject EAssetsPanel;
+    public GameObject EMenuPanel;
 
     // Main Menu Panels
     public GameObject MMenuPanel;
+
+    // Settings Panels
+    public GameObject SSettingsPanel;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +34,7 @@ public class MainEditorSceneControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // to be deleted
         if (Input.GetKeyDown(KeyCode.E))
         {
             CamFocusTo(EditorDefaultCamMark.transform);
@@ -37,6 +45,7 @@ public class MainEditorSceneControl : MonoBehaviour
             CamFocusTo(MainMenuCamMark.transform);
             SetEditorUI(false);
         }
+        // to be deleted/
     }
 
     /// <summary>
@@ -47,6 +56,7 @@ public class MainEditorSceneControl : MonoBehaviour
     {
         EToolsPanel.SetActive(active);
         EAssetsPanel.SetActive(active);
+        EMenuPanel.SetActive(false); // menu panel will always be invisible first. 
     }
 
     /// <summary>
@@ -56,6 +66,11 @@ public class MainEditorSceneControl : MonoBehaviour
     public void SetMainMenuUI(bool active = true)
     {
         MMenuPanel.SetActive(active);
+    }
+
+    public void SetSettingsUI(bool active = true)
+    {
+        SSettingsPanel.SetActive(active);
     }
 
     /// <summary>
@@ -79,5 +94,11 @@ public class MainEditorSceneControl : MonoBehaviour
     {
         vcam1.Follow = tr;
         vcam1.LookAt = tr;
+    }
+
+    public void EditorMenuButton()
+    {
+        // switch to another state; 
+        EMenuPanel.SetActive(!EMenuPanel.activeInHierarchy);
     }
 }

@@ -8,17 +8,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Aluminium honeycomb
-    second: {fileID: 2100000, guid: 095229c9ec4453a49a1ee4f6d4637579, type: 2}
+    second: {fileID: 2100000, guid: c90bcdf992e150d41b0ee0f7aabccad6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Automotive led lights
-    second: {fileID: 2100000, guid: c95aded7d7363c34fbcb1b610d3fc9a8, type: 2}
+    second: {fileID: 2100000, guid: 0faf08228432a664cb2d46f4d1eee2b0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Glass blue
-    second: {fileID: 2100000, guid: acf1526da7eee3d4b9bf82d57cecadd7, type: 2}
+    second: {fileID: 2100000, guid: 64859cf955a5fb047880af754183e463, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
