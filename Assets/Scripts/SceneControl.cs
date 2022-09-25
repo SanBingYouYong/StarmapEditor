@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Cinemachine;
 
-public class MainEditorSceneControl : MonoBehaviour
+public class SceneControl : MonoBehaviour
 {
     // Cam Control
     public CinemachineVirtualCamera vcam1;
@@ -23,6 +23,7 @@ public class MainEditorSceneControl : MonoBehaviour
 
     // Settings Panels
     public GameObject SSettingsPanel;
+
 
 
     // Start is called before the first frame update
@@ -89,11 +90,11 @@ public class MainEditorSceneControl : MonoBehaviour
     /// <summary>
     /// Set the Cinemachine Virtual Cam (vcam 1)'s Follow and LookAt to the given transform. 
     /// </summary>
-    /// <param name="tr">The transform of the desired object. </param>
+    /// <param name="tr">The transform of the desired object. </par`am>
     public void CamFocusTo(Transform tr)
     {
         vcam1.Follow = tr;
-        vcam1.LookAt = tr;
+        //vcam1.LookAt = tr;
     }
 
     public void EditorMenuButton()
@@ -101,4 +102,6 @@ public class MainEditorSceneControl : MonoBehaviour
         // switch to another state; 
         EMenuPanel.SetActive(!EMenuPanel.activeInHierarchy);
     }
+
+    
 }
